@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    cli-ui (2.3.1)
+    daybreak (0.3.0)
     diff-lcs (1.6.1)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
@@ -21,7 +23,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  cli-ui
+  daybreak
   rspec
+
+RUBY VERSION
+   ruby 3.4.2p28
 
 BUNDLED WITH
    2.6.8
