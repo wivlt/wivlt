@@ -1,4 +1,4 @@
-## WIVLT
+## WIVLT ![main workflow](https://github.com/wivlt/wivlt/actions/workflows/test.yml/badge.svg?branch=main)
 
 ### Motivation
 One of the challenges of having ADHD is ending a productive day without fully remembering what I’ve absorbed. Small but important details can slip away—insights that could be better understood, referenced later, or even shared. Especially when it's time to reflect on your growth, share progress with teammates or leaders, or build a case for a raise, it helps to have these discoveries documented.
