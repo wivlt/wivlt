@@ -2,7 +2,8 @@
 
 # lib/wivlt.rb
 
-require 'zeitwerk'
+require "zeitwerk"
+require_relative "wivlt/version"
 
 loader = Zeitwerk::Loader.new
 loader.push_dir("#{__dir__}/wivlt")
