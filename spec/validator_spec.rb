@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'validator'
 
 RSpec.describe 'Validator' do
@@ -12,21 +14,21 @@ RSpec.describe 'Validator' do
     context 'when description is empty' do
       it 'should be invalid' do
         command = '"" #tag1 #tag2 !link'
-        expect { Validator.input_valid?(command) }.to raise_error(ArgumentError, "invalid input")
+        expect { Validator.input_valid?(command) }.to raise_error(ArgumentError, 'invalid input')
       end
     end
 
     context 'when description is blank' do
       it 'should be invalid' do
         command = '" " #tag1 #tag2 !link'
-        expect { Validator.input_valid?(command) }.to raise_error(ArgumentError, "invalid input")
+        expect { Validator.input_valid?(command) }.to raise_error(ArgumentError, 'invalid input')
       end
     end
 
     context 'when description is nil' do
       it 'should be invalid' do
         command = '#tag1 #tag2 !link'
-        expect { Validator.input_valid?(command) }.to raise_error(ArgumentError, "invalid input")
+        expect { Validator.input_valid?(command) }.to raise_error(ArgumentError, 'invalid input')
       end
     end
 
@@ -82,7 +84,7 @@ RSpec.describe 'Validator' do
     context 'when content after description is not tag nor link' do
       it 'should be valid' do
         command = '"this is a basic description" not_a_tag not_a_link'
-        expect { Validator.input_valid?(command) }.to raise_error(ArgumentError, "invalid input")
+        expect { Validator.input_valid?(command) }.to raise_error(ArgumentError, 'invalid input')
       end
     end
   end
