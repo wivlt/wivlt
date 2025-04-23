@@ -5,7 +5,7 @@
 require 'zeitwerk'
 
 loader = Zeitwerk::Loader.new
-loader.push_dir(__dir__.to_s) # Load everything under lib/
+loader.push_dir("#{__dir__}/wivlt")
 loader.enable_reloading
 loader.setup
 
