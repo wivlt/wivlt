@@ -3,14 +3,14 @@
 # tools/add_path_comments.rb
 
 # TODO: Extract me to a gem later
-require 'pathname'
+require "pathname"
 
-Dir.glob(['spec/**/*.rb', 'lib/**/*.rb']).each do |file_path|
+Dir.glob(["spec/**/*.rb", "lib/**/*.rb"]).each do |file_path|
   lines = File.readlines(file_path)
   relative_path = Pathname.new(file_path).cleanpath.to_s
   path_comment = "# #{relative_path}"
 
-  has_frozen = lines.first&.strip == '# frozen_string_literal: true'
+  has_frozen = lines.first&.strip == "# frozen_string_literal: true"
   has_path_comment = lines.any? { |line| line.strip == path_comment }
 
   next if has_path_comment
