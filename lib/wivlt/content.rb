@@ -3,7 +3,7 @@
 # lib/wivlt/content.rb
 
 class Content # rubocop:disable Style/Documentation
-  REGEX = /^"(?<description>[^"]+)"(?:\s+(?<rest>.*))?$/
+  REGEX = /^"(?<description>[^"]+)"(?:\s+(?<rest>.*))?$/.freeze
   attr_accessor :description, :tags, :links, :error_message
 
   def initialize(input)

@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require 'rspec/core/rake_task'
+require "rspec/core/rake_task"
 
-desc 'Run RSpec tests'
+desc "Run RSpec tests"
 RSpec::Core::RakeTask.new(:spec)
 
 task default: :spec
 
-desc 'Run Add Path Comments Script'
+desc "Run Add Path Comments Script"
 task :add_path_comments do
   script_path = File.expand_path("#{__dir__}/tools/add_path_comments.rb")
   abort("Script not found: #{script_path}") unless File.exist?(script_path)
