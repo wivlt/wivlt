@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require 'content'
+require 'spec_helper'
 
-RSpec.describe 'Content' do
+RSpec.describe Wivlt::Content do
   describe '#initialize' do
     context 'when input is valid' do
-      input = '"this is the description" #tag1 #tag2 !link'
-      content = Content.new(input)
+      let(:input) { '"this is the description" #tag1 #tag2 !link' }
+      subject(:content) { described_class.new(input) }
 
       it { expect(content.description).to eq 'this is the description' }
       it { expect(content.tags).to eq ['#tag1', '#tag2'] }
@@ -14,8 +14,9 @@ RSpec.describe 'Content' do
     end
 
     context 'when input is invalid' do
-      input = '"" #tag1 #tag2 !link'
-      content = Content.new(input)
+      let(:input) { '"" #tag1 #tag2 !link' }
+      subject(:content) { described_class.new(input) }
+
       it { expect(content.error_message).to eq 'invalid input' }
     end
   end
