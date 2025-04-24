@@ -1,0 +1,5 @@
+ruby_version: 3.4
+ignore:
+  - ./examples/**/*
+  - ./**/*.gemfile.lock
+  - Gemfile.lock
